@@ -1,0 +1,67 @@
+#tab-form{
+	
+}
+#tab-form .tabbable{
+	
+}
+	#tab-form .tabbable .nav-tabs{
+		width: 150px;
+		float: left;
+	}
+		#tab-form .tabbable .nav-tabs li{
+			display: block;
+			height: 40px;
+			margin: 5px 0 5px 0;
+		}
+			#tab-form .tabbable .nav-tabs li a{
+				display: block;
+				padding: 5px;
+				line-height: 30px;
+				border-top: 1px solid #CCCCCC;
+				border-left: 1px solid #CCCCCC;
+				border-bottom: 1px solid #CCCCCC;
+			}
+			#tab-form .tabbable .nav-tabs .active-tab a{
+				color: #E60000;
+			}
+	#tab-form .tabbable .tab-content{
+		width: 700px;
+		float: left;
+	}
+		#tab-form .tabbable .tab-content .tab-pane{
+			border-top: 1px solid #CCCCCC;
+			border-left: 1px solid #CCCCCC;
+			border-right: 1px solid #CCCCCC;
+			padding: 8px;
+			display: none;
+		}
+		#tab-form .tabbable .tab-content > .active-tab{
+			display: block;
+		}
+.rest_form{
+	clear: both;
+	width: 682px;
+	margin-left: 170px;
+	padding: 8px;
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+}
+/*
+
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+    <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <p>I'm in Section 1.</p>
+    </div>
+    <div class="tab-pane" id="tab2">
+      <p>Howdy, I'm in Section 2.</p>
+    </div>
+  </div>
+</div>
+
+*/

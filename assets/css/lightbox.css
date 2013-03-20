@@ -1,0 +1,21 @@
+#lightbox_overlay{
+	display:none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+	#lightbox_inner{
+		background-color: #FFFFFF;
+		height: 600px;
+		width: 800px;
+		margin: -300px 0 0 -400px;
+		position: fixed;
+		left: 50%;
+		top: 50%;
+	}
+		#lightbox_content{
+			margin: 20px;
+		}
