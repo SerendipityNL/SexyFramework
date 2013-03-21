@@ -8,19 +8,25 @@ class Weblog_Controller extends Base_Controller {
 	}
 	
 	public function action_index() {
-	
-		//$this->view->set('offers', $this->Product->find_offers());
-		//$categories = $this->Category->find_by_parent(0);
-
-		//$this->view->set('categories', $categories);
+		$this->view->set('weblog', $this->Weblog->find_all());
 		$this->view->render('weblog/index');
 	}
 
 	public function action_new() {
+		if ( ! empty($_POST)) {
+			$weblog = $_POST;
+			if ($this->Weblog->save($weblog)) {
+				// insert data
+			}
+			else {
+				// render errors
+			}
+		}
+		
 		$this->view->render('weblog/new');
 	}
 
-	public function action_edit() {
+	public function action_edit($weblog_id) {
 		$this->view->render('weblog/edit');
 	}
 
