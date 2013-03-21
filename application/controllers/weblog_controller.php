@@ -8,7 +8,7 @@ class Weblog_Controller extends Base_Controller {
 	}
 	
 	public function action_index() {
-		$this->view->set('weblog', $this->Weblog->find_all());
+		$this->view->set('weblogs', $this->Weblog->find_all());
 		$this->view->render('weblog/index');
 	}
 

@@ -19,21 +19,17 @@ class Weblog_Model extends Base_Model {
 	);
 	
 	public function save($data, $id = null) {	
-		if ($this->validate($data)){
-			echo 'Hij valideert';
-			if (empty($id)) {
-				//$this->insert($data);
-			}
-			else {
-				//$this->update($data, $id);
-			}
-			// Data validates
-			return true;
+		//if ($this->validate($data)){}
+		
+		if (empty($id)) {
+			//$this->insert($data);
 		}
 		else {
-			// Data doesn't validate
-			return false;
+			//$this->update($data, $id);
 		}
+		// Data validates
+		return true;
+		
 	}
 
 	public function find_all() {
