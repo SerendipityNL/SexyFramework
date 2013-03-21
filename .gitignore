@@ -1,3 +1,5 @@
 .DS_Store
 
 config/settings.php
+
+config/database.php
