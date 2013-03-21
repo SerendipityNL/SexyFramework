@@ -14,7 +14,24 @@
 	</head>
 	
 	<body>
-		<div id="container">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<a class="brand" href="/">SexyFramework</a>
+				<ul class="nav">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown">
+							Weblogs
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/Weblog/">Manage</a></li>
+							<li><a href="/Weblog/new">Create new</a></li>
+						</ul>	
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="container">
 			<?php echo $content ?>
 		</div>
 	</body>
