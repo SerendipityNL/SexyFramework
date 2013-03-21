@@ -23,8 +23,8 @@
 							Weblogs
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="/Weblog/">Manage</a></li>
-							<li><a href="/Weblog/new">Create new</a></li>
+							<li><a href="weblog/">Manage</a></li>
+							<li><a href="weblog/new">Create new</a></li>
 						</ul>	
 					</li>
 				</ul>

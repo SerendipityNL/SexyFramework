@@ -1,11 +1,12 @@
+<h1>Weblog Management</h1>
 <div class="row-fluid">
 	<div class="span3 well">
-		<h1>New weblog</h1>
+		<h2>New weblog</h2>
 		<p>To create a new weblog, simply click the button below</p>
 		<a class="btn btn-primary" href="/weblog/new">New weblog</a>
 	</div>
 	<div class="span9 well">
-		<h1>Weblog Management</h1>
+		<h2>Weblogs</h2>
 		<?php 
 			if ( ! empty($weblogs)):
 				?>
@@ -31,9 +32,9 @@
 										<td><?php echo $weblog['created_at']; ?></td>
 										<td><?php echo $weblog['updated_at']; ?></td>
 										<td>
-											<a class="btn" href="/weblog/view/<?=$weblog['id']?>"><i class="icon-search"></i></a>
-											<a class="btn" href="/weblog/edit/<?=$weblog['id']?>"><i class="icon-pencil"></i></a>
-											<a class="btn btn-danger" href="/weblog/delete/<?=$weblog['id']?>"><i class="icon-remove icon-white"></i></a>
+											<a class="btn" href="weblog/view/<?=$weblog['id']?>"><i class="icon-search"></i></a>
+											<a class="btn" href="weblog/edit/<?=$weblog['id']?>"><i class="icon-pencil"></i></a>
+											<a class="btn btn-danger" href="weblog/delete/<?=$weblog['id']?>"><i class="icon-remove icon-white"></i></a>
 										</td>
 									</tr>
 								<?
