@@ -22,10 +22,10 @@ class Weblog_Model extends Base_Model {
 		//if ($this->validate($data)){}
 		
 		if (empty($id)) {
-			//$this->insert($data);
+			$this->insert($data);
 		}
 		else {
-			//$this->update($data, $id);
+			$this->update($data, $id);
 		}
 		// Data validates
 		return true;

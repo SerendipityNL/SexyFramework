@@ -16,7 +16,7 @@
 	<body>
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
-				<a class="brand" href="/">SexyFramework</a>
+				<a class="brand" href="<?php echo BASE_PATH ?>">SexyFramework</a>
 				<ul class="nav">
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown">

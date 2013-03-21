@@ -12,19 +12,22 @@ class Weblog_Controller extends Base_Controller {
 		$this->view->render('weblog/index');
 	}
 
+	public function action_view($weblog_id) {
+		$this->view->set('weblog', $this->Weblog->find($weblog_id));
+		$this->view->render('weblog/view');
+	}
+
 	public function action_new() {
 		if ( ! empty($_POST)) {
 			$weblog = $_POST;
 			if ($this->Weblog->save($weblog)) {
-				// insert data
-				// $this->redirect('weblog');
+				$this->msg_success('Weblog item is added!');
+				$this->redirect('weblog');
 			}
 			else {
 				$this->view->set('errors', $this->Weblog->errors);
-				// render errors
 			}
 		}
-
 		$this->view->render('weblog/new');
 	}
 
@@ -32,12 +35,11 @@ class Weblog_Controller extends Base_Controller {
 		if ( ! empty($_POST)) {
 			$weblog = $_POST;
 			if ($this->Weblog->save($weblog, $weblog_id)) {
-				// insert data
-				// $this->redirect('weblog');
+				$this->msg_success('Weblog item is updated!');
+				$this->redirect('weblog');
 			}
 			else {
 				$this->view->set('errors', $this->Weblog->errors);
-				// render errors
 			}
 		}
 		else {
@@ -53,6 +55,7 @@ class Weblog_Controller extends Base_Controller {
 			$this->Weblog->delete($weblog_id);
 			$this->redirect('weblog');
 		}
+		$this->view->set('weblog', $this->Weblog->find($weblog_id));
 		$this->view->render('weblog/delete');
 	}
 

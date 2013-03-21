@@ -119,8 +119,8 @@ class Base_View {
 			unset($_SESSION['msg_type'], $_SESSION['msg_title'], $_SESSION['msg_details']);
 
 			// Build the needed html
-			$html  = '<div class="msg msg_'.$type.'">';
-			$html .= '<div class="msg_title">'.$title.'</div>';
+			$html  = '<div class="alert alert-'.$type.'">';
+			$html .= '<span style="font-weight:bold">'.$title.'</span>';
 			if ( ! empty($details)) {
 				$html .= '<ul>';
 				foreach ($details as $item) {

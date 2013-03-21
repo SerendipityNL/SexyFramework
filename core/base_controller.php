@@ -62,7 +62,7 @@ class Base_Controller {
 
 	// This function builds an error message
 	protected function msg_error($title, $details = array()) {
-		$this->set_msg('error', $title, $details);
+		$this->set_msg('info', $title, $details);
 	}
 	
 	// This function puts all the messages in an array, that can be outputted in the new page
