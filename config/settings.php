@@ -3,10 +3,10 @@
 define('DEBUG_MODE', 0);
 
 // Set the default template, controller and action
-define('DEFAULT_TEMPLATE', 'dashboard');
+define('DEFAULT_TEMPLATE', 'default');
 
 // Set the defaukt controller
-define('DEFAULT_CONTROLLER', 'menu');
+define('DEFAULT_CONTROLLER', 'weblog');
 
 // Set the default action
 define('DEFAULT_ACTION', 'index');
@@ -20,15 +20,10 @@ else {
 	error_reporting(E_ALL ^ E_NOTICE);
 }
 
-define('BASE', $_SERVER['HTTP_HOST'].'/menukaarten-0.6/');
-
-define('SUBDOMAIN', '');
-
-define('LOCATION_TEMP', 1);
+define('BASE', $_SERVER['HTTP_HOST'].'/school/SexyFramework/');
 
 // Sets the base path without an / (for example: www.mywebsite.com/test)
-define('BASE_PATH', 'http://'.SUBDOMAIN.BASE);
-
+define('BASE_PATH', 'http://'.BASE);
 
 // Some global variables for a feature we may want to implement
 define('DOCROOT', __DIR__.'/');
