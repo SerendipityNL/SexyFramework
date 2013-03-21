@@ -51,12 +51,9 @@ class Weblog_Controller extends Base_Controller {
 	}
 
 	public function action_delete($weblog_id) {
-		if ( ! empty($_POST)) {
-			$this->Weblog->delete($weblog_id);
-			$this->redirect('weblog');
-		}
-		$this->view->set('weblog', $this->Weblog->find($weblog_id));
-		$this->view->render('weblog/delete');
+		$this->Weblog->delete($weblog_id);
+		$this->msg_success('Weblog item is deleted!');
+		$this->redirect('weblog');
 	}
 
 
