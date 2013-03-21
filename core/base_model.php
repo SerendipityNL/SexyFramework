@@ -67,58 +67,36 @@ class Base_Model {
 		
 	}
 
-	public function insert($data) {
+	public function insert($data) {	
+		// Set the timestamps
+		$data['created_at'] = date('Y-m-d H:i:s');
+		$data['updated_at'] = date('Y-m-d H:i:s');
 
-		// Check if the data validates
-		if($this->validate($data)) {
-			// Set the timestamps
-			$data['created_at'] = date('Y-m-d H:i:s');
-			$data['updated_at'] = date('Y-m-d H:i:s');
+		// Build the insert query
+		$sql = "INSERT INTO ".$this->_table." SET ".$this->sanitize_values($data);
 
-			// Build the insert query
-			$sql = "INSERT INTO ".$this->_table." SET ".$this->sanitize_values($data);
+		// Execute the query
+		$this->exec_query($sql);
 
-			// Execute the query
-			$this->exec_query($sql);
-
-			// Set the insert_id
-			$this->insert_id = $this->_db_link->insert_id;
-
-			// The data validates, return true
-			return true;
-		}
-		else {
-			// The data doesn't validates, return false
-			return false;
-		}
-		
+		// Set the insert_id
+		$this->insert_id = $this->_db_link->insert_id;		
 	}
 
 	public function update($data, $fields, $values = null) {
-		// Check if the data validates
-		if ($this->validate($data)) {
-			if (is_numeric($fields)) {
-				$this->where('id = ?', $fields);
-			}
-			else {
-				$this->where($fields, $values);
-			}
-			// Set the timestamps
-			$data['updated_at'] = date('Y-m-d H:i:s');
-
-			// Build the update query
-			$sql = "UPDATE ".$this->_table." SET ".$this->sanitize_values($data)." WHERE ".$this->_where;
-
-			// Execute the query
-			$this->exec_query($sql);
-
-			// The data validates, return true
-			return true;
+		if (is_numeric($fields)) {
+			$this->where('id = ?', $fields);
 		}
 		else {
-			// The data doesn't validates, return false
-			return false;
+			$this->where($fields, $values);
 		}
+		// Set the timestamps
+		$data['updated_at'] = date('Y-m-d H:i:s');
+
+		// Build the update query
+		$sql = "UPDATE ".$this->_table." SET ".$this->sanitize_values($data)." WHERE ".$this->_where;
+
+		// Execute the query
+		$this->exec_query($sql);
 	}
 
 	public function delete($fields = null, $values = null) {

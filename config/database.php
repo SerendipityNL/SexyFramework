@@ -3,13 +3,13 @@
 define('DB_HOST', 'localhost');
 
 // Database name
-define('DB_NAME', 'menuk_6');
+define('DB_NAME', 'sexyframework_weblog');
 
 // Database user
-define('DB_USER', 'menuk');
+define('DB_USER', 'root');
 
 // Database password
-define('DB_PASS', 'menuk');
+define('DB_PASS', 'usbw');
 
 // Database port
 define('DB_PORT', 3306);
