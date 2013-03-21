@@ -1,5 +1,5 @@
 <?php
-class User_Model extends Base_Model {
+class Weblog_Model extends Base_Model {
 
 	private $salt = 'PAwEr&^52sd+=2Y%T';
 

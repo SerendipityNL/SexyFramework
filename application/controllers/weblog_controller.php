@@ -1,12 +1,10 @@
 <?php
 defined('BASE_PATH') or die('No direct script access.');
 
-class Menu_Controller extends Base_Controller {
-
-	protected $_set_template = 'menu';
+class Weblog_Controller extends Base_Controller {
 
 	protected function constructor() {
-		$this->Category = load::model('Category');		
+		$this->Weblog = load::model('Weblog');		
 	}
 	
 	public function action_index() {
@@ -16,19 +14,18 @@ class Menu_Controller extends Base_Controller {
 
 		//$this->view->set('categories', $categories);
 		$this->view->render('weblog/index');
+	}
 
-		/*
-		NEEDED FOR FILTERING OUT EMPTY CATEGORIES, NEEDS TO BE CATCHED IN THE MODEL!!
-		if ( ! empty($menus)){
-			foreach($menus as $m){
-				if($this->Category->find_by_parent($m->id) || $this->Product->find_by_category($m->id) ){
-					$categories[] = $m;
-				}
-			}
-		}	
+	public function action_new() {
+		$this->view->render('weblog/new');
+	}
 
-		*/	
+	public function action_edit() {
+		$this->view->render('weblog/edit');
+	}
 
+	public function action_delete() {
+		$this->view->render('weblog/delete');
 	}
 
 
