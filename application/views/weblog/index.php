@@ -3,7 +3,7 @@
 	<div class="span3 well">
 		<h2>New weblog</h2>
 		<p>To create a new weblog, simply click the button below</p>
-		<a class="btn btn-primary" href="/weblog/new">New weblog</a>
+		<a class="btn btn-primary" href="weblog/new/">New weblog</a>
 	</div>
 	<div class="span9 well">
 		<h2>Weblogs</h2>
